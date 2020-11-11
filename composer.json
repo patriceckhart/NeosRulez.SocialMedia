@@ -1,0 +1,19 @@
+{
+  "description": "A Neos CMS plugin which render links to your social media profiles.",
+  "type": "neos-package",
+  "name": "neosrulez/socialmedia",
+  "require": {
+    "neos/neos": "*",
+    "neosrulez/bootstrap": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "NeosRulez\\SocialMedia\\": "Classes/"
+    }
+  },
+  "extra": {
+    "neos": {
+      "package-key": "NeosRulez.SocialMedia"
+    }
+  }
+}

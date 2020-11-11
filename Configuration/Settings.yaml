@@ -1,0 +1,17 @@
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          NeosRulez.SocialMedia:
+            - Main
+            - 'NodeTypes/*'
+            - 'NodeTypes/Component/*'
+    nodeTypes:
+      groups:
+        neosrulez_socialmedia:
+          position: 'end'
+          label: NeosRulez.SocialMedia:Main:grouplabel
+    fusion:
+      autoInclude:
+        NeosRulez.SocialMedia: true

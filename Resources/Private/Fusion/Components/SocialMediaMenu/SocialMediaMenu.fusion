@@ -1,0 +1,13 @@
+prototype(NeosRulez.SocialMedia:Component.SocialMediaMenu) < prototype(Neos.Neos:ContentComponent) {
+    profiles = Neos.Neos:ContentCollection {
+        nodePath = ${q(node).children('profiles').property('_path')}
+        collection = ${q(node).children('profiles').children()}
+    }
+    renderer = afx`
+        <NeosRulez.SocialMedia:Content.AbstractContent @if.render={props.profiles} >
+            <div class="neosrulez-socialmedia-socialmediamenu">
+                {props.profiles}
+            </div>
+        </NeosRulez.SocialMedia:Content.AbstractContent>
+    `
+}

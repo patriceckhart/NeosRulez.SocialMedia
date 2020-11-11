@@ -1,0 +1,20 @@
+'NeosRulez.SocialMedia:Component.SocialMediaMenu':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: i18n
+    group: neosrulez_socialmedia
+    icon: 'fas fa-hashtag'
+    inspector:
+      groups:
+        neosrulez_socialmedia_menu_group:
+          label: i18n
+          icon: 'fas fa-hashtag'
+  childNodes:
+    'profiles':
+      position: 'start'
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'NeosRulez.SocialMedia:Component.SocialMediaProfile': true
