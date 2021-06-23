@@ -1,0 +1,14 @@
+prototype(NeosRulez.SocialMedia:Content.SocialMediaProfile) < prototype(Neos.Neos:ContentComponent) {
+    title = ${node.properties.title}
+    link = ${node.properties.link}
+    icon = ${node.properties.faicon}
+    isinBackend = ${site.context.inBackend}
+
+    renderer = afx`
+        <div class="neosrulez-socialmedia-socialmediaprofile">
+            <Neos.Fusion:Tag tagName="a" attributes.href={props.link} attributes.target="_blank" attributes.class="d-block neosrulez-socialmedia-socialmediaprofile-link" attributes.data-title={props.title} >
+                <i @if.render={props.icon} class={props.icon} ></i>
+            </Neos.Fusion:Tag>
+        </div>
+    `
+}

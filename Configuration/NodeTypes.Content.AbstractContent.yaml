@@ -1,4 +1,0 @@
-'NeosRulez.SocialMedia:Content.AbstractContent':
-  abstract: true
-  superTypes:
-    'Neos.Neos:Content': true

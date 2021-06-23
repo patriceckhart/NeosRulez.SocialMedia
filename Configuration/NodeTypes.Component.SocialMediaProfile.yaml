@@ -1,6 +1,7 @@
-'NeosRulez.SocialMedia:Component.SocialMediaProfile':
+'NeosRulez.SocialMedia:Content.SocialMediaProfile':
   superTypes:
     'Neos.Neos:Content': true
+    'NeosRulez.Bootstrap:Mixin.FontAwesomeIcon': true
   ui:
     label: i18n
     group: neosrulez_socialmedia
@@ -33,23 +34,8 @@
           position: 2
           editorOptions:
             required: true
-    icon:
-      type: string
-      defaultValue: ~
+    faicon:
       ui:
-        label: i18n
-        reloadIfChanged: true
         inspector:
           group: neosrulez_socialmedia_profile_group
           position: 3
-          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
-          editorOptions:
-            allowEmpty: true
-            required: true
-        values: [ ]
-  postprocessors:
-    FontAwesomeIconsNodeTypePostprocessor:
-      postprocessor: NeosRulez\Bootstrap\NodeTypePostprocessor\FontAwesomeIconsNodeTypePostprocessor
-      postprocessorOptions:
-        properties:
-          icon: 'icon'

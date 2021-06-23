@@ -1,0 +1,10 @@
+prototype(NeosRulez.SocialMedia:Content.SocialMediaMenu) < prototype(Neos.Neos:ContentComponent) {
+    profiles = Neos.Neos:ContentCollection {
+        @context.node = ${node}
+    }
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent additionalClass="neosrulez-socialmedia-socialmediamenu" @if.render={props.profiles} >
+            {props.profiles}
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}

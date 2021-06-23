@@ -1,0 +1,18 @@
+up:
+  comments: 'Migrate NeosRulez.SocialMedia:Component.SocialMediaProfile to NeosRulez.SocialMedia:Content.SocialMediaProfile'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'NeosRulez.SocialMedia:Component.SocialMediaProfile'
+      transformations:
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'icon'
+            to: 'faicon'
+down:
+  comments: 'No down migration available'
